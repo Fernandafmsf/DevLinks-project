@@ -43,7 +43,7 @@ Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figm
 
 Esse projeto está sob a licença MIT.
 
-## Aprendizado
+## 📝 Aprendizado
 Ao realizar esse projeto, pude ter grandes aprendizados sobre centralização de elementos com o CSS em diferentes situações, como um elemento em posição absoluta, com display block, flex ou um texto. Além disso, apliquei o JS e pude compreender melhor o conceito de programação orientada à objetos. Também aprendi a utilizar o git, subindo este projeto para o github através do git bash. 
 
 ---
