@@ -1,0 +1,180 @@
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  /*background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center; 
+
+  (centraliza o eixo y da imagem, fazendo com que a parte superior da imagem fique fora da área de visualização caso não usemos o comando "top center")
+
+  background-size: cover; ( preenche toda a tela)
+  */
+
+  /* chamado de shorthand, podemos simplificar todo o codigo de background em um só linha, seguindo a ordem background: color image repeat position */
+}
+
+* {
+  /*remove as margens pre definidas pelo navegador*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --text-color:white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --border: solid 1px rgba(255, 255, 255, 0.5);
+  --border-hover: 1.5px solid #FFFFFF;
+  --links-hover-background:rgba(255, 255, 255, 0.2);
+  --button-background:rgba(255, 255, 255, 0.1);
+  --button-hover-background: rgba(255, 255, 255, 0.05);
+  --switch-bg-url: url(./assets/MoonStars.svg);
+}
+
+.light{
+  --text-color:black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --border: solid 1px rgba(0, 0, 0, 0.5);
+  --border-hover:1.5px solid #000000;
+  --links-hover-background:rgba(0, 0, 0, 0.1);
+  --button-background:rgba(0, 0, 0, 0.05);
+  --button-hover-background: rgba(0, 0, 0, 0.02);
+  --switch-bg-url: url(./assets/Sun.svg);
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color:var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px; /* a propriedade auto segundo o segundo elemento, vai preencher automaticamente a largura dos dois lados, o primeiro elemento vai para o top e o ultimo, bottom*/
+  padding: 0px 24px;
+}
+/*Profile*/
+#profile {
+  text-align: center; /*detalhe importante de alinhamento de uma imagem dentro de uma div*/
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  margin-top: 8px;
+  font-weight: 500;
+  line-height: 24px; /*altura de linha*/
+  /* font-size: 16px; já é padrao do dos navegadores*/
+}
+
+/*switch*/
+#switch{
+  width: 64px;
+  position: relative;
+
+  margin: 4px auto;
+
+}
+
+#switch button{
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  /*centralizando um elemento 'absolute' em relação a outro elemento*/
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  
+}
+
+.light #switch button{
+  right:0;
+  left: initial;
+}
+
+#switch span{
+  display:block;
+  width: 64px;
+  height: 24px;
+  background: var(--button-background);
+  border: var(--border);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+
+/* Links */
+ul {
+  list-style: none;
+  display: flex; /*foi preciso adicionar aqui também para poder utilizar a propriedade gap, para criar o espaço entre os botões*/
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0px;
+}
+
+ul li a {
+  display: flex; /*serve para transformar o link 'a' em uma tag que ocupe todo o espaço da caixa, como display block faz em um elemento que é inline*/
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  border: var(--border);
+  background: var(--button-background);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(
+    4px
+  ); /*por não ser 100% suportado por alguns navegadores*/
+
+  text-decoration: none; /*tem underline, overline..*/
+  font-weight: 500; /*referente a bold. 400 é padrão*/
+
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  border: var(--border-hover);
+  background: var(--button-hover-background);
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  /*entender melhor a diferença entre justify content e text align*/
+  font-size: 24px; 
+}
+
+#social-links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%; /* tem que ser posto aqui pra não alterar o background (ficar redondo e quadrado)*/
+
+}
+
+#social-links a:hover{
+  background: var(--links-hover-background);
+ 
+}
+
+footer{
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+
