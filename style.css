@@ -47,7 +47,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px; /* a propriedade auto segundo o segundo elemento, vai preencher automaticamente a largura dos dois lados, o primeiro elemento vai para o top e o ultimo, bottom*/
   padding: 0px 24px;
 }
