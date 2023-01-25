@@ -48,4 +48,4 @@ Ao realizar esse projeto, pude ter grandes aprendizados sobre centralização de
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+Feito com ♥ by me, com auxílio da Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
